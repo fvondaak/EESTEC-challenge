@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Imaginet>
+  <Function unit="Core.IMUnits.Phase_Map_4MIC_Zhang">
+    <DisplayName>Phase Map 4MIC Zhang</DisplayName>
+    <DisplayPath>/IMUnits</DisplayPath>
+
+    <Description>
+      Computes the STFT phase-map feature for one framed 4-channel microphone signal. This follows the Zhang et al. baseline idea: phase spectrum per microphone as CNN input. The default output is [4,129,1] for n_fft=256.
+
+      <Header>C implementation</Header>
+      <Inline fragment="phase_map_4mic_zhang.h:phase_map_4mic_zhang" language="C" />
+    </Description>
+
+    <Parameters>
+      <InputSocket name="input" pipe="data" />
+      <Int32Option name="window_length" default="256" min="16" max="512" ui="textbox" text="Window Length" description="Number of time samples per microphone in one STFT frame. Zhang et al. use DFT length 256 with 50 percent overlap at 16 kHz." />
+      <Int32Option name="n_fft" default="256" min="16" max="512" ui="textbox" text="DFT Length" description="DFT length. Default 256 gives 129 one-sided frequency bins." />
+      <Int32Option name="channel_major" default="0" min="0" max="1" ui="textbox" text="Channel Major" description="0 expects flattened [time,mic] input. 1 expects flattened [mic,time] input." />
+      <Int32Option name="apply_hann" default="1" min="0" max="1" ui="textbox" text="Apply Hann" description="1 applies a Hann window before the DFT." />
+      <OutputSocket name="output" shape="System.Shape(4,129,1)" type="input.type" pipe="data" />
+    </Parameters>
+
+    <Contracts>
+      <Assert test="input.shape.flat == 4 * window_length" error="Phase Map 4MIC Zhang expects a framed 4-channel input. Add Sliding Window before this unit. For window_length 256 the flat input size must be 1024." />
+      <Assert test="n_fft == 256" error="This IMUnit output contract is fixed to [4,129,1], therefore DFT Length must be 256." />
+      <Assert test="n_fft &gt;= window_length" error="DFT Length must be greater than or equal to Window Length." />
+      <Assert test="channel_major == 0 || channel_major == 1" error="Channel Major must be 0 or 1." />
+      <Assert test="apply_hann == 0 || apply_hann == 1" error="Apply Hann must be 0 or 1." />
+    </Contracts>
+
+    <Implementations>
+      <Implementation language="C" fragment="phase_map_4mic_zhang.h:phase_map_4mic_zhang" call="phase_map_4mic_zhangf32(input, window_length, n_fft, channel_major, apply_hann, output)" />
+      <Implementation language="Python" fragment="phase_map_4mic_zhang.py:phase_map_4mic_zhang_py" call="phase_map_4mic_zhang_py(input, window_length, n_fft, channel_major, apply_hann, output)" />
+    </Implementations>
+
+  </Function>
+</Imaginet>
