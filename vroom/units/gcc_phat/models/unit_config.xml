@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="1.1.0">
+  <UnitLibrary>
+    <Directory>units/select_columns</Directory>
+    <Directory>units/gcc_phat</Directory>
+  </UnitLibrary>
+</ImagimobStudio>

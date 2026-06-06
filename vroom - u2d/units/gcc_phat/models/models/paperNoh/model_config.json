@@ -1,0 +1,514 @@
+{
+  "class_name": "Sequential",
+  "config": {
+    "name": "paperNoh",
+    "layers": [
+      {
+        "class_name": "Conv2D",
+        "config": {
+          "name": "layer_0",
+          "dtype": "float32",
+          "filters": 32,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": null,
+          "padding": "same",
+          "activation": "linear",
+          "use_bias": false,
+          "trainable": true,
+          "batch_input_shape": [
+            null,
+            3,
+            1,
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "class_name": "BatchNormalization",
+        "config": {
+          "name": "layer_1",
+          "dtype": "float32",
+          "epsilon": 0.001,
+          "trainable": true,
+          "scale": true,
+          "center": true,
+          "axis": -1
+        }
+      },
+      {
+        "class_name": "Activation",
+        "config": {
+          "name": "layer_2",
+          "dtype": "float32",
+          "activation": "relu",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "MaxPooling2D",
+        "config": {
+          "name": "layer_3",
+          "dtype": "float32",
+          "pool_size": [
+            2,
+            2
+          ],
+          "strides": [
+            2,
+            1
+          ],
+          "padding": "valid",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "Conv2D",
+        "config": {
+          "name": "layer_4",
+          "dtype": "float32",
+          "filters": 32,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": null,
+          "padding": "same",
+          "activation": "linear",
+          "use_bias": false,
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "BatchNormalization",
+        "config": {
+          "name": "layer_5",
+          "dtype": "float32",
+          "epsilon": 0.001,
+          "trainable": true,
+          "scale": true,
+          "center": true,
+          "axis": -1
+        }
+      },
+      {
+        "class_name": "Activation",
+        "config": {
+          "name": "layer_6",
+          "dtype": "float32",
+          "activation": "relu",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "MaxPooling2D",
+        "config": {
+          "name": "layer_7",
+          "dtype": "float32",
+          "pool_size": [
+            2,
+            2
+          ],
+          "strides": [
+            2,
+            1
+          ],
+          "padding": "valid",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "Conv2D",
+        "config": {
+          "name": "layer_8",
+          "dtype": "float32",
+          "filters": 32,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": null,
+          "padding": "same",
+          "activation": "linear",
+          "use_bias": false,
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "BatchNormalization",
+        "config": {
+          "name": "layer_9",
+          "dtype": "float32",
+          "epsilon": 0.001,
+          "trainable": true,
+          "scale": true,
+          "center": true,
+          "axis": -1
+        }
+      },
+      {
+        "class_name": "Activation",
+        "config": {
+          "name": "layer_10",
+          "dtype": "float32",
+          "activation": "relu",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "MaxPooling2D",
+        "config": {
+          "name": "layer_11",
+          "dtype": "float32",
+          "pool_size": [
+            2,
+            2
+          ],
+          "strides": [
+            2,
+            1
+          ],
+          "padding": "valid",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "Conv2D",
+        "config": {
+          "name": "layer_12",
+          "dtype": "float32",
+          "filters": 64,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": null,
+          "padding": "same",
+          "activation": "linear",
+          "use_bias": false,
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "BatchNormalization",
+        "config": {
+          "name": "layer_13",
+          "dtype": "float32",
+          "epsilon": 0.001,
+          "trainable": true,
+          "scale": true,
+          "center": true,
+          "axis": -1
+        }
+      },
+      {
+        "class_name": "Activation",
+        "config": {
+          "name": "layer_14",
+          "dtype": "float32",
+          "activation": "relu",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "MaxPooling2D",
+        "config": {
+          "name": "layer_15",
+          "dtype": "float32",
+          "pool_size": [
+            2,
+            2
+          ],
+          "strides": [
+            2,
+            1
+          ],
+          "padding": "valid",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "Conv2D",
+        "config": {
+          "name": "layer_16",
+          "dtype": "float32",
+          "filters": 128,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": null,
+          "padding": "same",
+          "activation": "linear",
+          "use_bias": false,
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "BatchNormalization",
+        "config": {
+          "name": "layer_17",
+          "dtype": "float32",
+          "epsilon": 0.001,
+          "trainable": true,
+          "scale": true,
+          "center": true,
+          "axis": -1
+        }
+      },
+      {
+        "class_name": "Activation",
+        "config": {
+          "name": "layer_18",
+          "dtype": "float32",
+          "activation": "relu",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "MaxPooling2D",
+        "config": {
+          "name": "layer_19",
+          "dtype": "float32",
+          "pool_size": [
+            2,
+            2
+          ],
+          "strides": [
+            2,
+            1
+          ],
+          "padding": "valid",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "Conv2D",
+        "config": {
+          "name": "layer_20",
+          "dtype": "float32",
+          "filters": 256,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": null,
+          "padding": "same",
+          "activation": "linear",
+          "use_bias": false,
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "BatchNormalization",
+        "config": {
+          "name": "layer_21",
+          "dtype": "float32",
+          "epsilon": 0.001,
+          "trainable": true,
+          "scale": true,
+          "center": true,
+          "axis": -1
+        }
+      },
+      {
+        "class_name": "Activation",
+        "config": {
+          "name": "layer_22",
+          "dtype": "float32",
+          "activation": "relu",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "MaxPooling2D",
+        "config": {
+          "name": "layer_23",
+          "dtype": "float32",
+          "pool_size": [
+            2,
+            2
+          ],
+          "strides": [
+            2,
+            1
+          ],
+          "padding": "valid",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "Conv2D",
+        "config": {
+          "name": "layer_24",
+          "dtype": "float32",
+          "filters": 256,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": null,
+          "padding": "same",
+          "activation": "linear",
+          "use_bias": false,
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "BatchNormalization",
+        "config": {
+          "name": "layer_25",
+          "dtype": "float32",
+          "epsilon": 0.001,
+          "trainable": true,
+          "scale": true,
+          "center": true,
+          "axis": -1
+        }
+      },
+      {
+        "class_name": "Activation",
+        "config": {
+          "name": "layer_26",
+          "dtype": "float32",
+          "activation": "relu",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "MaxPooling2D",
+        "config": {
+          "name": "layer_27",
+          "dtype": "float32",
+          "pool_size": [
+            2,
+            2
+          ],
+          "strides": [
+            2,
+            1
+          ],
+          "padding": "valid",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "Conv2D",
+        "config": {
+          "name": "layer_28",
+          "dtype": "float32",
+          "filters": 256,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": null,
+          "padding": "same",
+          "activation": "linear",
+          "use_bias": false,
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "BatchNormalization",
+        "config": {
+          "name": "layer_29",
+          "dtype": "float32",
+          "epsilon": 0.001,
+          "trainable": true,
+          "scale": true,
+          "center": true,
+          "axis": -1
+        }
+      },
+      {
+        "class_name": "Activation",
+        "config": {
+          "name": "layer_30",
+          "dtype": "float32",
+          "activation": "relu",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "MaxPooling2D",
+        "config": {
+          "name": "layer_31",
+          "dtype": "float32",
+          "pool_size": [
+            2,
+            2
+          ],
+          "strides": [
+            2,
+            1
+          ],
+          "padding": "valid",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "Flatten",
+        "config": {
+          "name": "layer_32",
+          "dtype": "float32"
+        }
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "layer_33",
+          "dtype": "float32",
+          "units": 2048,
+          "use_bias": false,
+          "activation": "linear",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "BatchNormalization",
+        "config": {
+          "name": "layer_34",
+          "dtype": "float32",
+          "epsilon": 0.001,
+          "trainable": true,
+          "scale": true,
+          "center": true,
+          "axis": -1
+        }
+      },
+      {
+        "class_name": "Activation",
+        "config": {
+          "name": "layer_35",
+          "dtype": "float32",
+          "activation": "relu",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "layer_36",
+          "dtype": "float32",
+          "units": 9,
+          "use_bias": false,
+          "activation": "linear",
+          "trainable": true
+        }
+      },
+      {
+        "class_name": "Activation",
+        "config": {
+          "name": "layer_37",
+          "dtype": "float32",
+          "activation": "sigmoid",
+          "trainable": true
+        }
+      }
+    ]
+  }
+}

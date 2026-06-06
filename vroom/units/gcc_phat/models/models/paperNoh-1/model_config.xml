@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="1.1.0">
+  <Model name="paperNoh-1" id="e5d60389-1f0c-4822-b5f2-cff4075cb88e">
+    <ProjectId>cfaed650-61dd-4a71-aaa3-1c1def92a2a8</ProjectId>
+    <LossFunction>CategoricalCrossentropy</LossFunction>
+    <Epochs>100</Epochs>
+    <BatchSize>1</BatchSize>
+    <SplitCount>16</SplitCount>
+    <Patience>20</Patience>
+    <TrainingEnvironment>
+    </TrainingEnvironment>
+    <Optimizer>
+      <LearningRate>0.001</LearningRate>
+      <WeightDecay>0.0001</WeightDecay>
+    </Optimizer>
+    <Network inshape="[3,1,1,2]" intype="Float32" infreq="1" outshape="[9]" outtype="Float32">
+      <Unit id="Core.Layers.Convolution2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="filters" type="Int32">32</Argument>
+        <Argument param="kernel_size" type="Shape">[3,3]</Argument>
+        <Argument param="padding" type="String">same</Argument>
+        <Argument param="activation" type="String">linear</Argument>
+        <Argument param="use_bias" type="Boolean">False</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.BatchNormalization">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="epsilon" type="Double">0.001</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="scale" type="Boolean">True</Argument>
+        <Argument param="center" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+        <Argument param="axis" type="Int32">-1</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Activation">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="activation" type="String">relu</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.MaxPool2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="pool_size" type="Shape">[2,2]</Argument>
+        <Argument param="strides" type="Shape">[2,1]</Argument>
+        <Argument param="padding" type="String">valid</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Convolution2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="filters" type="Int32">32</Argument>
+        <Argument param="kernel_size" type="Shape">[3,3]</Argument>
+        <Argument param="padding" type="String">same</Argument>
+        <Argument param="activation" type="String">linear</Argument>
+        <Argument param="use_bias" type="Boolean">False</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.BatchNormalization">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="epsilon" type="Double">0.001</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="scale" type="Boolean">True</Argument>
+        <Argument param="center" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+        <Argument param="axis" type="Int32">-1</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Activation">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="activation" type="String">relu</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.MaxPool2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="pool_size" type="Shape">[2,2]</Argument>
+        <Argument param="strides" type="Shape">[2,1]</Argument>
+        <Argument param="padding" type="String">valid</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Convolution2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="filters" type="Int32">32</Argument>
+        <Argument param="kernel_size" type="Shape">[3,3]</Argument>
+        <Argument param="padding" type="String">same</Argument>
+        <Argument param="activation" type="String">linear</Argument>
+        <Argument param="use_bias" type="Boolean">False</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.BatchNormalization">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="epsilon" type="Double">0.001</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="scale" type="Boolean">True</Argument>
+        <Argument param="center" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+        <Argument param="axis" type="Int32">-1</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Activation">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="activation" type="String">relu</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.MaxPool2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="pool_size" type="Shape">[2,2]</Argument>
+        <Argument param="strides" type="Shape">[2,1]</Argument>
+        <Argument param="padding" type="String">valid</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Convolution2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="filters" type="Int32">64</Argument>
+        <Argument param="kernel_size" type="Shape">[3,3]</Argument>
+        <Argument param="padding" type="String">same</Argument>
+        <Argument param="activation" type="String">linear</Argument>
+        <Argument param="use_bias" type="Boolean">False</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.BatchNormalization">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="epsilon" type="Double">0.001</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="scale" type="Boolean">True</Argument>
+        <Argument param="center" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+        <Argument param="axis" type="Int32">-1</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Activation">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="activation" type="String">relu</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.MaxPool2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="pool_size" type="Shape">[2,2]</Argument>
+        <Argument param="strides" type="Shape">[2,1]</Argument>
+        <Argument param="padding" type="String">valid</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Convolution2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="filters" type="Int32">128</Argument>
+        <Argument param="kernel_size" type="Shape">[3,3]</Argument>
+        <Argument param="padding" type="String">same</Argument>
+        <Argument param="activation" type="String">linear</Argument>
+        <Argument param="use_bias" type="Boolean">False</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.BatchNormalization">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="epsilon" type="Double">0.001</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="scale" type="Boolean">True</Argument>
+        <Argument param="center" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+        <Argument param="axis" type="Int32">-1</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Activation">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="activation" type="String">relu</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.MaxPool2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="pool_size" type="Shape">[2,2]</Argument>
+        <Argument param="strides" type="Shape">[2,1]</Argument>
+        <Argument param="padding" type="String">valid</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Convolution2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="filters" type="Int32">256</Argument>
+        <Argument param="kernel_size" type="Shape">[3,3]</Argument>
+        <Argument param="padding" type="String">same</Argument>
+        <Argument param="activation" type="String">linear</Argument>
+        <Argument param="use_bias" type="Boolean">False</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.BatchNormalization">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="epsilon" type="Double">0.001</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="scale" type="Boolean">True</Argument>
+        <Argument param="center" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+        <Argument param="axis" type="Int32">-1</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Activation">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="activation" type="String">relu</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.MaxPool2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="pool_size" type="Shape">[2,2]</Argument>
+        <Argument param="strides" type="Shape">[2,1]</Argument>
+        <Argument param="padding" type="String">valid</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Convolution2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="filters" type="Int32">256</Argument>
+        <Argument param="kernel_size" type="Shape">[3,3]</Argument>
+        <Argument param="padding" type="String">same</Argument>
+        <Argument param="activation" type="String">linear</Argument>
+        <Argument param="use_bias" type="Boolean">False</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.BatchNormalization">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="epsilon" type="Double">0.001</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="scale" type="Boolean">True</Argument>
+        <Argument param="center" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+        <Argument param="axis" type="Int32">-1</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Activation">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="activation" type="String">relu</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.MaxPool2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="pool_size" type="Shape">[2,2]</Argument>
+        <Argument param="strides" type="Shape">[2,1]</Argument>
+        <Argument param="padding" type="String">valid</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Convolution2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="filters" type="Int32">256</Argument>
+        <Argument param="kernel_size" type="Shape">[3,3]</Argument>
+        <Argument param="padding" type="String">same</Argument>
+        <Argument param="activation" type="String">linear</Argument>
+        <Argument param="use_bias" type="Boolean">False</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.BatchNormalization">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="epsilon" type="Double">0.001</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="scale" type="Boolean">True</Argument>
+        <Argument param="center" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+        <Argument param="axis" type="Int32">-1</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Activation">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="activation" type="String">relu</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.MaxPool2D">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="pool_size" type="Shape">[2,2]</Argument>
+        <Argument param="strides" type="Shape">[2,1]</Argument>
+        <Argument param="padding" type="String">valid</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Flatten">
+        <Argument param="input" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Dense">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="units" type="Int32">2048</Argument>
+        <Argument param="use_bias" type="Boolean">False</Argument>
+        <Argument param="activation" type="String">linear</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+      </Unit>
+      <Unit id="Core.Layers.BatchNormalization">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="epsilon" type="Double">0.001</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="scale" type="Boolean">True</Argument>
+        <Argument param="center" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+        <Argument param="axis" type="Int32">-1</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Activation">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="activation" type="String">relu</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Dense">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="units" type="Int32">9</Argument>
+        <Argument param="use_bias" type="Boolean">False</Argument>
+        <Argument param="activation" type="String">linear</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+      </Unit>
+      <Unit id="Core.Layers.Activation">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="activation" type="String">sigmoid</Argument>
+        <Argument param="trainable" type="Boolean">True</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+    </Network>
+    <BuildSteps>
+      <Training />
+      <ConfusionMatrix />
+    </BuildSteps>
+    <SymbolWeights>
+      <SymbolWeight symbol="unlabeled" weight="1" />
+      <SymbolWeight symbol="0" weight="1" />
+      <SymbolWeight symbol="135" weight="1" />
+      <SymbolWeight symbol="225" weight="1" />
+      <SymbolWeight symbol="270" weight="1" />
+      <SymbolWeight symbol="45" weight="1" />
+      <SymbolWeight symbol="90" weight="1" />
+      <SymbolWeight symbol="180" weight="1" />
+      <SymbolWeight symbol="315" weight="1" />
+    </SymbolWeights>
+    <Preprocessor inshape="[2]" intype="Float32" infreq="16000" outshape="[3,1,1,2]" outtype="Float32">
+      <Unit id="Core.IMUnits.GCC_PHAT_4MIC">
+        <Argument param="input" type="String">data</Argument>
+        <Argument param="window_size" type="Int32">512</Argument>
+        <Argument param="output" type="String">data</Argument>
+      </Unit>
+    </Preprocessor>
+    <Postprocessor inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
+  </Model>
+</ImagimobStudio>
