@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="1bacff01-a3e9-4d72-99e0-f4358cdbdd16">
+    <Tracks>
+      <Track name="analog boo" type="audiowav" isLabelTrack="False">
+        <PayloadFile>analog-boo.wav</PayloadFile>
+        <Shape>
+          <Axis name="Audio" size="2">
+            <Label index="0">Left</Label>
+            <Label index="1">Right</Label>
+          </Axis>
+        </Shape>
+      </Track>
+      <Track name="mems" type="audiowav" isLabelTrack="False">
+        <PayloadFile>mems.wav</PayloadFile>
+        <Shape>
+          <Axis name="Audio" size="2">
+            <Label index="0">Left</Label>
+            <Label index="1">Right</Label>
+          </Axis>
+        </Shape>
+      </Track>
+      <Track name="the-sound" type="audiowav" isLabelTrack="False">
+        <PayloadFile>the-sound.wav</PayloadFile>
+        <Shape />
+      </Track>
+      <Track name="Live Labeling" type="labelcsv">
+        <PayloadFile>Live-Labeling.label</PayloadFile>
+        <Shape>
+          <Axis name="Labels" size="8">
+            <Label index="0">0</Label>
+            <Label index="1">45</Label>
+            <Label index="2">90</Label>
+            <Label index="3">135</Label>
+            <Label index="4">180</Label>
+            <Label index="5">225</Label>
+            <Label index="6">270</Label>
+            <Label index="7">315</Label>
+          </Axis>
+        </Shape>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

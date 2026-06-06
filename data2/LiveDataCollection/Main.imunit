@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Imaginet version="2.0.0.0">
+  <Compound unit="e2e038a0-e281-4de4-a43c-355bd5afec8d">
+    <Nodes>
+      <LabelListNode id="node_0" width="120" height="120" x="389.1504727860481" y="270.34336763681245" enabled="true" profiling="false">
+        <Label>0</Label>
+        <Label>45</Label>
+        <Label>90</Label>
+        <Label>135</Label>
+        <Label>180</Label>
+        <Label>225</Label>
+        <Label>270</Label>
+        <Label>315</Label>
+      </LabelListNode>
+      <DeviceNode id="node_4" x="796.1124056134001" y="711.6771208691721" enabled="true" profiling="false" name="Analog Microphone" board="290de5cb-460b-41bf-7dd4-800e2f100133" boardName="PSOC Edge E84 AI Kit" device="1">
+        <BooleanArgument param="stereo_20">true</BooleanArgument>
+      </DeviceNode>
+      <DeviceNode id="node_5" x="764.4238587596197" y="808.553535536442" enabled="true" profiling="false" name="Microphone" board="290de5cb-460b-41bf-7dd4-800e2f100133" boardName="PSOC Edge E84 AI Kit" device="0">
+        <BooleanArgument param="stereo_20">true</BooleanArgument>
+      </DeviceNode>
+      <UnitNode id="node_7" x="1542.1513372566774" y="702.6232503395229" enabled="true" profiling="false" name="analog boo" unit="ImagimobStudio.Modules.DataTrack" />
+      <UnitNode id="node_9" x="1543.0567243096427" y="838.4313082842907" enabled="true" profiling="false" name="mems" unit="ImagimobStudio.Modules.DataTrack" />
+    </Nodes>
+    <Connections>
+      <Connection>
+        <Source node="node_4" param="Audio" />
+        <Target node="node_7" param="data" />
+      </Connection>
+      <Connection>
+        <Source node="node_5" param="Audio" />
+        <Target node="node_9" param="data" />
+      </Connection>
+    </Connections>
+  </Compound>
+</Imaginet>
