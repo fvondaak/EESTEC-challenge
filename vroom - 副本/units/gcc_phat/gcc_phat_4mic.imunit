@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Imaginet> 
+  <Function unit="Core.IMUnits.GCC_PHAT_4MIC"> <DisplayName>GCC-PHAT 4-Microphone</DisplayName> <DisplayPath>/IMUnits</DisplayPath>
+
+    <Description> Computes localized GCC-PHAT spatial features for a 4-channel microphone array across all 6 unique channel pairs, windowed to +/-50ms, resampled to 100 discrete lag steps, and min-max normalized globally. Yields a flat 600-dimensional vector.
+
+      <Header>Python implementation</Header>
+      <Inline fragment="gcc_phat_4mic.py:gcc_phat_4mic_py" language="Python" />
+    </Description>
+
+    <Parameters>
+      <InputSocket name="input" pipe="data" /> <Int32Option name="window_size" min="128" ui="textbox" text="Window Size" description="The input buffer frame size (e.g., 1024 samples)." />
+
+      <OutputSocket name="output" shape="input.shape.replace(0, 600).replace(1, 1)" type="input.type" pipe="data" />
+    </Parameters>
+
+    <Contracts> 
+      <Assert test="output.shape.flat == 600" error="Total output elements must be exactly 600 (6 pairs x 100 lags). right now we have {output.shape} and {output.shape.flat}" />
+      
+    </Contracts>
+
+    <Implementations>
+      <Implementation language="Python" fragment="gcc_phat_4mic.py:gcc_phat_4mic_py" call="compute_gcc_phat_py(input, window_size, output)" />
+    </Implementations>
+
+  </Function>
+</Imaginet>
