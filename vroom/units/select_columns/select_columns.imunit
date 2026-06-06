@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Imaginet> 
+  <Function unit="Core.IMUnits.Select_Columns"> <!-- This is the namespace of the unit, this has to be unique -->
+    <DisplayName>Select Columns</DisplayName> <!-- Unit name visible in UI -->
+    <DisplayPath>/IMUnits</DisplayPath>
+
+    <Description> <!-- Description of unit, shown in UI -->
+      Keeps only the columns between the start and end index. Including the start and end columns themselves.
+
+      <Header>C implementation</Header>
+      <Inline fragment="select_columns.h:select_columns" language="C" />
+    </Description>
+
+    <Parameters>
+      <InputSocket name="input" pipe="data" /> <!-- This is the input to the unit, TODO: explain 'pipe' -->
+      <Int32Option name="start_index" min="0" ui="textbox" text="Start Index" description="Start column index. Enumerated from right to left." />
+	  <Int32Option name="end_index" min="0" ui="textbox" text="End Index" description="Edn column index. Enumerated from right to left." />
+      <OutputSocket name="output" shape="input.shape.replace(0,end_index-start_index+1)" type="input.type" pipe="data" />
+    </Parameters>
+
+    <Contracts> <!-- the contracts specifies rules/boundaries that has to be fulfilled in this units-->
+      <Assert test="end_index &lt;= input.shape.flat" error="Indices must be less than {input.shape.flat}." />
+	  <Assert test="start_index &lt;= end_index" error="Start Index must be less than End Index." />
+      https://developer.imagimob.com/custom-units.html#system-shape -->
+    </Contracts>
+
+    <Implementations>
+	  <Implementation language="C" fragment="select_columns.h:select_columns" call="select_columnsf32(input, start_index, end_index, output)" />
+	  <Implementation language="Python" fragment="select_columns.py:select_columns_py" call="select_cols_py(input, start_index, end_index, output)" />
+    </Implementations>
+
+  </Function>
+</Imaginet>
